@@ -39,7 +39,7 @@ def gerar_item_fatura(nome_item:str, preco:float, porcetagem_desconto:float):
 
 #Exercicio 9
 def resumo_emprestimo(capital:float, taxa_anual:float, anos):
-    taxa_mensal = taxa_anual * 0.12
+    taxa_mensal = taxa_anual * 0.0421505
     meses = anos * 12
     total = capital * (1+taxa_mensal/100)**meses
     parcela = total / meses
@@ -48,8 +48,8 @@ def resumo_emprestimo(capital:float, taxa_anual:float, anos):
 
 if __name__ == '__main__':
 
-    print("EXERCICIOS==========================================\n\n")
-    saudacao = formatar_saudacao("Aquila", "Porto Alegre")
+    print("EXERCICIOS===========================================\n\n")
+    saudacao = formatar_saudacao("Alice", "Porto Alegre")
     print(f"1 = {saudacao}")
     perimetro = calcular_perimetro(altura=10, largura=5)
     print(f"2 = {perimetro}")
