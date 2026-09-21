@@ -38,12 +38,17 @@ def gerar_item_fatura(nome_item:str, preco:float, porcetagem_desconto:float):
     return nome_item, preco_final, desconto
 
 #Exercicio 9
-def resumo_emprestimo(capital:float, taxa_anual:float, anos):
-    taxa_mensal = taxa_anual * 0.0421505
+def resumo_emprestimo(capital:float, taxa_anual:float, anos:int):
+    mensal = taxa_anual / 12 / 100
     meses = anos * 12
-    total = capital * (1+taxa_mensal/100)**meses
-    parcela = total / meses
+    parcela = capital * (mensal * ((1+mensal)**meses)) / (((1+mensal)**meses) - 1)
+    total = parcela * meses
     return capital, parcela, total
+
+#Exercicio 10
+def calcular_distancia(x1,y1,x2,y2):
+    distancia = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    return f"A distância entre ({x1}, {y1}) e ({x2}, {y2}) é de {distancia:.2f} unidades."
 
 
 if __name__ == '__main__':
@@ -67,4 +72,6 @@ if __name__ == '__main__':
     print(f"8 = Item: {nome_item} | Preço Final: R$ {preco_final} (Você economizou R$ {desconto})")
     capital, parcela, total = resumo_emprestimo(10000.00, 6.0, 3.0)
     print(f"9 = Empréstimo: R$ {capital:.2f} | Parcela Mensal: R$ {parcela:.2f} | Total: R$ {total:.2f}")
-    print("=====================================================")
+    distancia = calcular_distancia(1,2,4,6)
+    print(f"10 = {distancia}")    
+    print("\n=====================================================")
