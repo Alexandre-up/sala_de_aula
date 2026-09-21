@@ -80,27 +80,40 @@ def tipo_triangulo(a:float, b:float, c:float):
             return "Equilátero"
         else:
             return "Não é Triângulo"     
+        
+#Exercicio 10
+def calcular_imposto(salario:float):
+    if salario <= 2000.00:
+        return 0.0
+    elif salario <= 4000.00:
+      return (salario - 2000.00) * 0.10
+    else:
+        return 200.00 + (salario - 4000.00) * 0.20
     
 
 if __name__ == '__main__':
 
     print("\n=> EXERCICIOS <====================================\n")
     teste = fizz_buzz(27)
-    print(f"1 = {teste}")
+    print(f"1 → {teste}")
     idade = verificar_maioridade(17)
-    print(f"2 = {idade}")
+    print(f"2 → {idade}")
     paridade = verificar_paridade(23)
-    print(f"3 = {paridade}")
+    print(f"3 → {paridade}")
     numero = classificar_numero(0)
-    print(f"4 = {numero}")
+    print(f"4 → {numero}")
     media = calcular_resultado(8.5,6.5)
-    print(f"5 = {media}")
+    print(f"5 → {media}")
     numero = maior_de_dois(8.5,8.5)
-    print(f"6 = {numero}")
+    print(f"6 → {numero}")
     desconto = calcular_desconto(100.0, False)
-    print(f"7 = {desconto}")
+    print(f"7 → {desconto}")
     conceito = conceito_nota(8.9)
-    print(f'8 = Conceito "{conceito}"')
+    print(f'8 → Conceito "{conceito}"')
     triangulo = tipo_triangulo(6,7,9)
-    print(f"9 = {triangulo}")
+    print(f"9 → {triangulo}")
+    imposto1 = calcular_imposto(1800.00)
+    imposto2 = calcular_imposto(3000.00)
+    imposto3 = calcular_imposto(5000.00)
+    print(f"10 → 1800 = {imposto1} | 3000 = {imposto2} | 5000 = {imposto3}")
     print("\n===================================================")
