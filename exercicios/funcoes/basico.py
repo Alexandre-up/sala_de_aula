@@ -1,43 +1,43 @@
-#Exercicio 1
+#Exercício 1
 def formatar_saudacao(nome:str, cidade:str):
     return f"Olá {nome}, seja bem vinda a {cidade}!"
 
-#Exercicio 2
+#Exercício 2
 def calcular_perimetro(largura:float, altura:float) -> float:
     perimetro = 2* (largura + altura)
     return perimetro
 
-#Exercicio 3
+#Exercício 3
 def fahrenheit_para_celsius(temp_f) -> float:
     conversao = (temp_f - 32) * (5 / 9)
     return conversao
 
-#Exercicio 4
+#Exercício 4
 def calcular_gorjeta_por_pessoa(conta:float, porcetagem_gorjeta:float, pessoas:int):
     gorjeta = (conta * (porcetagem_gorjeta/100) / pessoas)
     return gorjeta
 
-#Exercicio 5
+#Exercício 5
 def resumo_circulo(raio) -> float:
     area = 3.14159 * raio**2
     return area
 
-#Exercicio 6
+#Exercício 6
 def resumo_juros_compostos(capital:float, taxa:float, anos:int) -> float:
     montante = capital * (1+taxa/100)**anos
     return montante
 
-#Exercicio 7
+#Exercício 7
 def metricas_cilindro(raio, altura) -> float:
     return 3.14159 * raio**2 * altura, 2 * 3.14159 * raio * (raio + altura)
 
-#Exercicio 8
+#Exercício 8
 def gerar_item_fatura(nome_item:str, preco:float, porcetagem_desconto:float):
     desconto = preco * porcetagem_desconto / 100
     preco_final = preco - desconto
     return nome_item, preco_final, desconto
 
-#Exercicio 9
+#Exercício 9
 def resumo_emprestimo(capital:float, taxa_anual:float, anos:int):
     mensal = taxa_anual / 12 / 100
     meses = anos * 12
@@ -45,7 +45,7 @@ def resumo_emprestimo(capital:float, taxa_anual:float, anos:int):
     total = parcela * meses
     return capital, parcela, total
 
-#Exercicio 10
+#Exercício 10
 def calcular_distancia(x1,y1,x2,y2):
     distancia = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
     return f"A distância entre ({x1}, {y1}) e ({x2}, {y2}) é de {distancia:.2f} unidades."
@@ -53,7 +53,7 @@ def calcular_distancia(x1,y1,x2,y2):
 
 if __name__ == '__main__':
 
-    print("EXERCICIOS===========================================\n\n")
+    print("\n=> EXERCICIOS <======================================\n")
     saudacao = formatar_saudacao("Alice", "Porto Alegre")
     print(f"1 = {saudacao}")
     perimetro = calcular_perimetro(altura=10, largura=5)

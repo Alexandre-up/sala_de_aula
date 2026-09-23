@@ -1,10 +1,10 @@
-#exercicio 0
+#Exercício
 def dobrar(numeros:[]):
     for numero in numeros:
         numero = numero * 2
-        print(numero)
+        print(numero, end=" ")
 
-#Exercicio 1
+#Exercício 1
 def filtrar_pares(numeros:list):
     pares = [] # ou list()
     for numero in numeros:
@@ -12,7 +12,7 @@ def filtrar_pares(numeros:list):
             pares.append(numero)
     return pares
     
-#Exercicio 2
+#Exercício 2
 def contar_negativos(numeros:list):
         count = 0
         for numero in numeros:
@@ -20,7 +20,7 @@ def contar_negativos(numeros:list):
                 count += 1
         return count
 
-#Exercicio 3
+#Exercício 3
 def somar_maiores_que(numeros:list, limite):
     soma = 0
     for numero in numeros:
@@ -28,7 +28,7 @@ def somar_maiores_que(numeros:list, limite):
             soma += numero
     return soma
 
-#Exercicio 4
+#Exercício 4
 def zerar_negativos(numeros:list):
     aux = numeros.copy()
     for numero in numeros:
@@ -37,7 +37,7 @@ def zerar_negativos(numeros:list):
             aux[indice] = 0
     return aux
 
-#Exercicio 5
+#Exercício 5
 def contem_valor(lista:list, alvo):
     index = 0
     while(index < len(lista)):
@@ -47,7 +47,7 @@ def contem_valor(lista:list, alvo):
 
     return False
 
-#Exercicio 6
+#Exercício 6
 def contar_aprovados(notas:list) -> float:
     aprovados = 0
     for nota in notas:
@@ -56,7 +56,7 @@ def contar_aprovados(notas:list) -> float:
 
     return aprovados
 
-#Exercicio 7
+#Exercício 7
 def filtrar_palavras_curtas(palavras:list, tamanho_maximo:int):
     filtro = []
     for palavra in palavras:
@@ -64,7 +64,7 @@ def filtrar_palavras_curtas(palavras:list, tamanho_maximo:int):
             filtro.append(palavra)
     return filtro
 
-#Exercicio 8
+#Exercício 8
 def separar_pares_impares(numeros:list):
     pares = 0
     impares = 0
@@ -76,7 +76,7 @@ def separar_pares_impares(numeros:list):
             
     return f"8º → Pares: {pares} | Ímpares: {impares}"
 
-#Exercicio 9
+#Exercício 9
 def encontrar_extremos(numeros:list):
     menor = numeros[0]
     maior = numeros[0]
@@ -87,7 +87,7 @@ def encontrar_extremos(numeros:list):
             maior = numero
     return (menor,maior)
 
-#Exercicio 10
+#Exercício 10
 def simular_saque(saldo_inicial:float, saques:list):
     saldo = saldo_inicial
     i = 0
@@ -98,14 +98,73 @@ def simular_saque(saldo_inicial:float, saques:list):
         i += 1
     return saldo
 
+#Exercício 11
+def remover_duplicados(lista:list):
+    resultado = []
+    for elemento in lista:
+        if elemento in lista:
+            if elemento not in resultado:
+                resultado.append(elemento)
+    
+    return resultado
+
+#Exercício 12
+def media_positivos(numeros:list):
+    soma = 0
+    quantidade = 0
+    for numero in numeros:
+        if numero in numeros:
+            if numero > 0:
+                soma += numero
+                quantidade += 1
+    if quantidade == 0:
+        return 0.0
+    return soma / quantidade
+
+#Exercício 13
+def validar_senhas(lista_senhas:list[str]):
+    senhas_validas =[]
+    for senha in lista_senhas:
+        if len(senha) >=8:
+            senhas_validas.append(senha)
+    return senhas_validas
+
+#Exercício 14
+def primeiro_impar(numeros):
+    i = 0
+    while i < len(numeros):
+        if numeros[i] % 2 != 0:
+            return numeros[i]
+        i += 1
+    return None
+
+#Exercício 15
+def contar_ocorrencias(lista:list, alvo):
+    quant = 0
+    for obj in lista:
+        if obj == alvo:
+                quant += 1
+    return quant
+
+#Exercício 16
+def estrit_crescente(palavras:list):
+    i = 1
+    while i < len(palavras) - 1:
+        if palavras[i] >= palavras[i-1]:
+            return False    
+        i += 1
+    return True
+
+
 
 
 if __name__ == '__main__':
 
-    print("\n=> EXERCICIOS <====================================\n")
+    print("\n=> EXERCICIOS <======================================\n")
+    print("-> → ", end="")
     dobro = dobrar([1,2,3,4,5])   
     numeros_pares = filtrar_pares([1,2,3,4,5,6])
-    print(f"1º → {numeros_pares}")
+    print(f"\n1º → {numeros_pares}")
     n_negativos = contar_negativos([-3,-2,-1,0,1,2,3,])
     print(f"2º → [{n_negativos}]")
     limite = somar_maiores_que([10, 5, 20, 3, 15], 8)
@@ -123,5 +182,18 @@ if __name__ == '__main__':
     extremos = encontrar_extremos([14,2,35,-4,20])
     print(f"9º → {extremos}")
     saque = simular_saque(200,[50,100,80,30])
-    print(F"10º → Saldo: R${saque},00")
-    print("\n===================================================")
+    print(f"10º → Saldo: R${saque},00")
+    duplicados = remover_duplicados([1, 3, 2, 3, 1, 4, 2])
+    print(f"11º → Duplicados: {duplicados}")
+    media = media_positivos([-5, 10, -2, 20, 30])
+    print(f"12º → {media}")
+    valida = validar_senhas(["12345", "senha1234", "admin", "python2026"])
+    print(f"13º → {valida}")
+    impar = primeiro_impar([2,4,6,7,9,10,13])
+    print(f"14º → [{impar}]")
+    contar = contar_ocorrencias(["a","b","a","c","a"], "a")
+    print(f"15º → [{contar}]")
+    crescente1 = estrit_crescente(["lá","lua","porta","cinema","computador"])
+    crescente2 = estrit_crescente(["palito","geringonça","lápis","lâmpada"])
+    print(f"16º → {crescente1} | {crescente2}")
+    print("\n=====================================================")

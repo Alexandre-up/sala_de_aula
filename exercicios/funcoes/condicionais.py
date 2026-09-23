@@ -90,30 +90,45 @@ def calcular_imposto(salario:float):
     else:
         return 200.00 + (salario - 4000.00) * 0.20
     
+#Exercício 11
+def validador_bissexto(ano:int):
+    if ano % 400 == 0:
+        return True
+    elif ano % 100 == 0:
+        return False
+    elif ano % 4 == 0:
+        return True
+    else:
+        return False
+    
 
 if __name__ == '__main__':
 
-    print("\n=> EXERCICIOS <====================================\n")
+    print("\n=> EXERCICIOS <======================================\n")
     teste = fizz_buzz(27)
-    print(f"1 → {teste}")
+    print(f"1º → {teste}")
     idade = verificar_maioridade(17)
-    print(f"2 → {idade}")
+    print(f"2º → {idade}")
     paridade = verificar_paridade(23)
-    print(f"3 → {paridade}")
+    print(f"3º → {paridade}")
     numero = classificar_numero(0)
-    print(f"4 → {numero}")
+    print(f"4º → {numero}")
     media = calcular_resultado(8.5,6.5)
-    print(f"5 → {media}")
+    print(f"5º → {media}")
     numero = maior_de_dois(8.5,8.5)
-    print(f"6 → {numero}")
+    print(f"6º → {numero}")
     desconto = calcular_desconto(100.0, False)
-    print(f"7 → {desconto}")
+    print(f"7º → {desconto}")
     conceito = conceito_nota(8.9)
-    print(f'8 → Conceito "{conceito}"')
+    print(f'8º → Conceito "{conceito}"')
     triangulo = tipo_triangulo(6,7,9)
-    print(f"9 → {triangulo}")
+    print(f"9º → {triangulo}")
     imposto1 = calcular_imposto(1800.00)
     imposto2 = calcular_imposto(3000.00)
     imposto3 = calcular_imposto(5000.00)
-    print(f"10 → 1800 = {imposto1} | 3000 = {imposto2} | 5000 = {imposto3}")
-    print("\n===================================================")
+    print(f"10º → 1800 = {imposto1} | 3000 = {imposto2} | 5000 = {imposto3}")
+    bissexto1 = validador_bissexto(2024)
+    bissexto2 = validador_bissexto(1900)
+    bissexto3 = validador_bissexto(2000)
+    print(f"11º → Ano 2024 = {bissexto1} | Ano 1900 = {bissexto2} | Ano 2000 = {bissexto3}")
+    print("\n=====================================================")
