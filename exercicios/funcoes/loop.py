@@ -163,7 +163,7 @@ def mover_zeros_final(numeros:list):
             zeros.append(numero)
             
     for numero in numeros:
-        if numero ==0:
+        if numero == 0:
             zeros.append(numero)
     
     return zeros
