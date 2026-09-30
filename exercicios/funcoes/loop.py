@@ -207,7 +207,7 @@ def validar_extrato(saldo_inicial:float, transacoes:list):
             
         i += 1
         
-    return f"Extrato Válido: Saldo Final {saldo:.2f}"
+    return f"Extrato Válido: Saldo Final R$ {saldo:.2f}"
 
 
 if __name__ == '__main__':
