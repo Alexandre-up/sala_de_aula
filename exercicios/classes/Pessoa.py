@@ -1,7 +1,7 @@
 class Pessoa:
     
-    nome: ""
-    cidade: ""
+    nome = ""
+    cidade = ""
     
     def __init__(self, nome:str, cidade:str):
         

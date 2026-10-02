@@ -1,7 +1,7 @@
 class Retangulo:
     
-    base: 0.0
-    altura: 0.0
+    base = 0.0
+    altura = 0.0
     
     def __init__(self, base:float, altura:float):
         

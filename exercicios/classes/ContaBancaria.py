@@ -13,4 +13,6 @@ class ContaBancaria:
         
 conta = ContaBancaria("Alexandre")
 conta.depositar(500.0)
-print(f"Titular: {conta.titular} | Saldo: R$: {conta.saldo:.2f}")
+print(
+    f"\nTitular: {conta.titular}"
+    f"\nSaldo: R$: {conta.saldo:.2f}")

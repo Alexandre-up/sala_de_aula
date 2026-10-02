@@ -1,7 +1,7 @@
 class Produto:
     
-    nome: ""
-    preco: 0.0
+    nome = ""
+    preco = 0.0
     
     def __init__(self, nome:str, preco:float):
         

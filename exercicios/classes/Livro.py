@@ -1,6 +1,6 @@
 class Livro:
     
-    titulo =  ""
+    titulo = ""
     autor = ""
     paginas = 0
     
